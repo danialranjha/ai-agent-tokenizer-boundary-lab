@@ -1,0 +1,2205 @@
+{
+  "schema_version": 1,
+  "tokenizers_version": "0.23.1",
+  "scope": "Real tokenizer library, synthetic byte vocabulary; no model or action",
+  "construction": {
+    "base_vocab_size": 256,
+    "merges": [],
+    "added_tokens": [
+      {
+        "id": 256,
+        "content": "<|im_start|>",
+        "single_word": false,
+        "lstrip": false,
+        "rstrip": false,
+        "normalized": false,
+        "special": true
+      },
+      {
+        "id": 257,
+        "content": "<|im_end|>",
+        "single_word": false,
+        "lstrip": false,
+        "rstrip": false,
+        "normalized": false,
+        "special": true
+      },
+      {
+        "id": 258,
+        "content": "<tool_response>",
+        "single_word": false,
+        "lstrip": false,
+        "rstrip": false,
+        "normalized": false,
+        "special": false
+      },
+      {
+        "id": 259,
+        "content": "</tool_response>",
+        "single_word": false,
+        "lstrip": false,
+        "rstrip": false,
+        "normalized": false,
+        "special": false
+      }
+    ],
+    "synthetic_ids": true
+  },
+  "fixture_count": 18,
+  "mode_count": 3,
+  "rows": [
+    {
+      "fixture": "role_start",
+      "family": "marker",
+      "text": "<|im_start|>",
+      "modes": {
+        "default": {
+          "ids": [
+            256
+          ],
+          "tokens": [
+            "<|im_start|>"
+          ],
+          "decoded": "<|im_start|>",
+          "roundtrip_utf8": true,
+          "marker_ids": [
+            256
+          ]
+        },
+        "special_flag": {
+          "ids": [
+            27,
+            91,
+            72,
+            76,
+            62,
+            82,
+            83,
+            64,
+            81,
+            83,
+            91,
+            29
+          ],
+          "tokens": [
+            "<",
+            "|",
+            "i",
+            "m",
+            "_",
+            "s",
+            "t",
+            "a",
+            "r",
+            "t",
+            "|",
+            ">"
+          ],
+          "decoded": "<|im_start|>",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        },
+        "untrusted_copy": {
+          "ids": [
+            27,
+            91,
+            72,
+            76,
+            62,
+            82,
+            83,
+            64,
+            81,
+            83,
+            91,
+            29
+          ],
+          "tokens": [
+            "<",
+            "|",
+            "i",
+            "m",
+            "_",
+            "s",
+            "t",
+            "a",
+            "r",
+            "t",
+            "|",
+            ">"
+          ],
+          "decoded": "<|im_start|>",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        }
+      }
+    },
+    {
+      "fixture": "role_end",
+      "family": "marker",
+      "text": "<|im_end|>",
+      "modes": {
+        "default": {
+          "ids": [
+            257
+          ],
+          "tokens": [
+            "<|im_end|>"
+          ],
+          "decoded": "<|im_end|>",
+          "roundtrip_utf8": true,
+          "marker_ids": [
+            257
+          ]
+        },
+        "special_flag": {
+          "ids": [
+            27,
+            91,
+            72,
+            76,
+            62,
+            68,
+            77,
+            67,
+            91,
+            29
+          ],
+          "tokens": [
+            "<",
+            "|",
+            "i",
+            "m",
+            "_",
+            "e",
+            "n",
+            "d",
+            "|",
+            ">"
+          ],
+          "decoded": "<|im_end|>",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        },
+        "untrusted_copy": {
+          "ids": [
+            27,
+            91,
+            72,
+            76,
+            62,
+            68,
+            77,
+            67,
+            91,
+            29
+          ],
+          "tokens": [
+            "<",
+            "|",
+            "i",
+            "m",
+            "_",
+            "e",
+            "n",
+            "d",
+            "|",
+            ">"
+          ],
+          "decoded": "<|im_end|>",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        }
+      }
+    },
+    {
+      "fixture": "tool_start",
+      "family": "marker",
+      "text": "<tool_response>",
+      "modes": {
+        "default": {
+          "ids": [
+            258
+          ],
+          "tokens": [
+            "<tool_response>"
+          ],
+          "decoded": "<tool_response>",
+          "roundtrip_utf8": true,
+          "marker_ids": [
+            258
+          ]
+        },
+        "special_flag": {
+          "ids": [
+            258
+          ],
+          "tokens": [
+            "<tool_response>"
+          ],
+          "decoded": "<tool_response>",
+          "roundtrip_utf8": true,
+          "marker_ids": [
+            258
+          ]
+        },
+        "untrusted_copy": {
+          "ids": [
+            27,
+            83,
+            78,
+            78,
+            75,
+            62,
+            81,
+            68,
+            82,
+            79,
+            78,
+            77,
+            82,
+            68,
+            29
+          ],
+          "tokens": [
+            "<",
+            "t",
+            "o",
+            "o",
+            "l",
+            "_",
+            "r",
+            "e",
+            "s",
+            "p",
+            "o",
+            "n",
+            "s",
+            "e",
+            ">"
+          ],
+          "decoded": "<tool_response>",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        }
+      }
+    },
+    {
+      "fixture": "tool_end",
+      "family": "marker",
+      "text": "</tool_response>",
+      "modes": {
+        "default": {
+          "ids": [
+            259
+          ],
+          "tokens": [
+            "</tool_response>"
+          ],
+          "decoded": "</tool_response>",
+          "roundtrip_utf8": true,
+          "marker_ids": [
+            259
+          ]
+        },
+        "special_flag": {
+          "ids": [
+            259
+          ],
+          "tokens": [
+            "</tool_response>"
+          ],
+          "decoded": "</tool_response>",
+          "roundtrip_utf8": true,
+          "marker_ids": [
+            259
+          ]
+        },
+        "untrusted_copy": {
+          "ids": [
+            27,
+            14,
+            83,
+            78,
+            78,
+            75,
+            62,
+            81,
+            68,
+            82,
+            79,
+            78,
+            77,
+            82,
+            68,
+            29
+          ],
+          "tokens": [
+            "<",
+            "/",
+            "t",
+            "o",
+            "o",
+            "l",
+            "_",
+            "r",
+            "e",
+            "s",
+            "p",
+            "o",
+            "n",
+            "s",
+            "e",
+            ">"
+          ],
+          "decoded": "</tool_response>",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        }
+      }
+    },
+    {
+      "fixture": "mixed",
+      "family": "marker",
+      "text": "<|im_start|>note<tool_response>hello</tool_response><|im_end|>",
+      "modes": {
+        "default": {
+          "ids": [
+            256,
+            77,
+            78,
+            83,
+            68,
+            258,
+            71,
+            68,
+            75,
+            75,
+            78,
+            259,
+            257
+          ],
+          "tokens": [
+            "<|im_start|>",
+            "n",
+            "o",
+            "t",
+            "e",
+            "<tool_response>",
+            "h",
+            "e",
+            "l",
+            "l",
+            "o",
+            "</tool_response>",
+            "<|im_end|>"
+          ],
+          "decoded": "<|im_start|>note<tool_response>hello</tool_response><|im_end|>",
+          "roundtrip_utf8": true,
+          "marker_ids": [
+            256,
+            258,
+            259,
+            257
+          ]
+        },
+        "special_flag": {
+          "ids": [
+            27,
+            91,
+            72,
+            76,
+            62,
+            82,
+            83,
+            64,
+            81,
+            83,
+            91,
+            29,
+            77,
+            78,
+            83,
+            68,
+            258,
+            71,
+            68,
+            75,
+            75,
+            78,
+            259,
+            27,
+            91,
+            72,
+            76,
+            62,
+            68,
+            77,
+            67,
+            91,
+            29
+          ],
+          "tokens": [
+            "<",
+            "|",
+            "i",
+            "m",
+            "_",
+            "s",
+            "t",
+            "a",
+            "r",
+            "t",
+            "|",
+            ">",
+            "n",
+            "o",
+            "t",
+            "e",
+            "<tool_response>",
+            "h",
+            "e",
+            "l",
+            "l",
+            "o",
+            "</tool_response>",
+            "<",
+            "|",
+            "i",
+            "m",
+            "_",
+            "e",
+            "n",
+            "d",
+            "|",
+            ">"
+          ],
+          "decoded": "<|im_start|>note<tool_response>hello</tool_response><|im_end|>",
+          "roundtrip_utf8": true,
+          "marker_ids": [
+            258,
+            259
+          ]
+        },
+        "untrusted_copy": {
+          "ids": [
+            27,
+            91,
+            72,
+            76,
+            62,
+            82,
+            83,
+            64,
+            81,
+            83,
+            91,
+            29,
+            77,
+            78,
+            83,
+            68,
+            27,
+            83,
+            78,
+            78,
+            75,
+            62,
+            81,
+            68,
+            82,
+            79,
+            78,
+            77,
+            82,
+            68,
+            29,
+            71,
+            68,
+            75,
+            75,
+            78,
+            27,
+            14,
+            83,
+            78,
+            78,
+            75,
+            62,
+            81,
+            68,
+            82,
+            79,
+            78,
+            77,
+            82,
+            68,
+            29,
+            27,
+            91,
+            72,
+            76,
+            62,
+            68,
+            77,
+            67,
+            91,
+            29
+          ],
+          "tokens": [
+            "<",
+            "|",
+            "i",
+            "m",
+            "_",
+            "s",
+            "t",
+            "a",
+            "r",
+            "t",
+            "|",
+            ">",
+            "n",
+            "o",
+            "t",
+            "e",
+            "<",
+            "t",
+            "o",
+            "o",
+            "l",
+            "_",
+            "r",
+            "e",
+            "s",
+            "p",
+            "o",
+            "n",
+            "s",
+            "e",
+            ">",
+            "h",
+            "e",
+            "l",
+            "l",
+            "o",
+            "<",
+            "/",
+            "t",
+            "o",
+            "o",
+            "l",
+            "_",
+            "r",
+            "e",
+            "s",
+            "p",
+            "o",
+            "n",
+            "s",
+            "e",
+            ">",
+            "<",
+            "|",
+            "i",
+            "m",
+            "_",
+            "e",
+            "n",
+            "d",
+            "|",
+            ">"
+          ],
+          "decoded": "<|im_start|>note<tool_response>hello</tool_response><|im_end|>",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        }
+      }
+    },
+    {
+      "fixture": "quoted_marker",
+      "family": "marker",
+      "text": "Manual says \"<tool_response>\" is a label.",
+      "modes": {
+        "default": {
+          "ids": [
+            44,
+            64,
+            77,
+            84,
+            64,
+            75,
+            220,
+            82,
+            64,
+            88,
+            82,
+            220,
+            1,
+            258,
+            1,
+            220,
+            72,
+            82,
+            220,
+            64,
+            220,
+            75,
+            64,
+            65,
+            68,
+            75,
+            13
+          ],
+          "tokens": [
+            "M",
+            "a",
+            "n",
+            "u",
+            "a",
+            "l",
+            "Ġ",
+            "s",
+            "a",
+            "y",
+            "s",
+            "Ġ",
+            "\"",
+            "<tool_response>",
+            "\"",
+            "Ġ",
+            "i",
+            "s",
+            "Ġ",
+            "a",
+            "Ġ",
+            "l",
+            "a",
+            "b",
+            "e",
+            "l",
+            "."
+          ],
+          "decoded": "Manual says \"<tool_response>\" is a label.",
+          "roundtrip_utf8": true,
+          "marker_ids": [
+            258
+          ]
+        },
+        "special_flag": {
+          "ids": [
+            44,
+            64,
+            77,
+            84,
+            64,
+            75,
+            220,
+            82,
+            64,
+            88,
+            82,
+            220,
+            1,
+            258,
+            1,
+            220,
+            72,
+            82,
+            220,
+            64,
+            220,
+            75,
+            64,
+            65,
+            68,
+            75,
+            13
+          ],
+          "tokens": [
+            "M",
+            "a",
+            "n",
+            "u",
+            "a",
+            "l",
+            "Ġ",
+            "s",
+            "a",
+            "y",
+            "s",
+            "Ġ",
+            "\"",
+            "<tool_response>",
+            "\"",
+            "Ġ",
+            "i",
+            "s",
+            "Ġ",
+            "a",
+            "Ġ",
+            "l",
+            "a",
+            "b",
+            "e",
+            "l",
+            "."
+          ],
+          "decoded": "Manual says \"<tool_response>\" is a label.",
+          "roundtrip_utf8": true,
+          "marker_ids": [
+            258
+          ]
+        },
+        "untrusted_copy": {
+          "ids": [
+            44,
+            64,
+            77,
+            84,
+            64,
+            75,
+            220,
+            82,
+            64,
+            88,
+            82,
+            220,
+            1,
+            27,
+            83,
+            78,
+            78,
+            75,
+            62,
+            81,
+            68,
+            82,
+            79,
+            78,
+            77,
+            82,
+            68,
+            29,
+            1,
+            220,
+            72,
+            82,
+            220,
+            64,
+            220,
+            75,
+            64,
+            65,
+            68,
+            75,
+            13
+          ],
+          "tokens": [
+            "M",
+            "a",
+            "n",
+            "u",
+            "a",
+            "l",
+            "Ġ",
+            "s",
+            "a",
+            "y",
+            "s",
+            "Ġ",
+            "\"",
+            "<",
+            "t",
+            "o",
+            "o",
+            "l",
+            "_",
+            "r",
+            "e",
+            "s",
+            "p",
+            "o",
+            "n",
+            "s",
+            "e",
+            ">",
+            "\"",
+            "Ġ",
+            "i",
+            "s",
+            "Ġ",
+            "a",
+            "Ġ",
+            "l",
+            "a",
+            "b",
+            "e",
+            "l",
+            "."
+          ],
+          "decoded": "Manual says \"<tool_response>\" is a label.",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        }
+      }
+    },
+    {
+      "fixture": "adjacent",
+      "family": "marker",
+      "text": "<tool_response><tool_response>",
+      "modes": {
+        "default": {
+          "ids": [
+            258,
+            258
+          ],
+          "tokens": [
+            "<tool_response>",
+            "<tool_response>"
+          ],
+          "decoded": "<tool_response><tool_response>",
+          "roundtrip_utf8": true,
+          "marker_ids": [
+            258,
+            258
+          ]
+        },
+        "special_flag": {
+          "ids": [
+            258,
+            258
+          ],
+          "tokens": [
+            "<tool_response>",
+            "<tool_response>"
+          ],
+          "decoded": "<tool_response><tool_response>",
+          "roundtrip_utf8": true,
+          "marker_ids": [
+            258,
+            258
+          ]
+        },
+        "untrusted_copy": {
+          "ids": [
+            27,
+            83,
+            78,
+            78,
+            75,
+            62,
+            81,
+            68,
+            82,
+            79,
+            78,
+            77,
+            82,
+            68,
+            29,
+            27,
+            83,
+            78,
+            78,
+            75,
+            62,
+            81,
+            68,
+            82,
+            79,
+            78,
+            77,
+            82,
+            68,
+            29
+          ],
+          "tokens": [
+            "<",
+            "t",
+            "o",
+            "o",
+            "l",
+            "_",
+            "r",
+            "e",
+            "s",
+            "p",
+            "o",
+            "n",
+            "s",
+            "e",
+            ">",
+            "<",
+            "t",
+            "o",
+            "o",
+            "l",
+            "_",
+            "r",
+            "e",
+            "s",
+            "p",
+            "o",
+            "n",
+            "s",
+            "e",
+            ">"
+          ],
+          "decoded": "<tool_response><tool_response>",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        }
+      }
+    },
+    {
+      "fixture": "embedded",
+      "family": "marker",
+      "text": "a<tool_response>b",
+      "modes": {
+        "default": {
+          "ids": [
+            64,
+            258,
+            65
+          ],
+          "tokens": [
+            "a",
+            "<tool_response>",
+            "b"
+          ],
+          "decoded": "a<tool_response>b",
+          "roundtrip_utf8": true,
+          "marker_ids": [
+            258
+          ]
+        },
+        "special_flag": {
+          "ids": [
+            64,
+            258,
+            65
+          ],
+          "tokens": [
+            "a",
+            "<tool_response>",
+            "b"
+          ],
+          "decoded": "a<tool_response>b",
+          "roundtrip_utf8": true,
+          "marker_ids": [
+            258
+          ]
+        },
+        "untrusted_copy": {
+          "ids": [
+            64,
+            27,
+            83,
+            78,
+            78,
+            75,
+            62,
+            81,
+            68,
+            82,
+            79,
+            78,
+            77,
+            82,
+            68,
+            29,
+            65
+          ],
+          "tokens": [
+            "a",
+            "<",
+            "t",
+            "o",
+            "o",
+            "l",
+            "_",
+            "r",
+            "e",
+            "s",
+            "p",
+            "o",
+            "n",
+            "s",
+            "e",
+            ">",
+            "b"
+          ],
+          "decoded": "a<tool_response>b",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        }
+      }
+    },
+    {
+      "fixture": "ordinary",
+      "family": "benign",
+      "text": "The weather is sunny.",
+      "modes": {
+        "default": {
+          "ids": [
+            51,
+            71,
+            68,
+            220,
+            86,
+            68,
+            64,
+            83,
+            71,
+            68,
+            81,
+            220,
+            72,
+            82,
+            220,
+            82,
+            84,
+            77,
+            77,
+            88,
+            13
+          ],
+          "tokens": [
+            "T",
+            "h",
+            "e",
+            "Ġ",
+            "w",
+            "e",
+            "a",
+            "t",
+            "h",
+            "e",
+            "r",
+            "Ġ",
+            "i",
+            "s",
+            "Ġ",
+            "s",
+            "u",
+            "n",
+            "n",
+            "y",
+            "."
+          ],
+          "decoded": "The weather is sunny.",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        },
+        "special_flag": {
+          "ids": [
+            51,
+            71,
+            68,
+            220,
+            86,
+            68,
+            64,
+            83,
+            71,
+            68,
+            81,
+            220,
+            72,
+            82,
+            220,
+            82,
+            84,
+            77,
+            77,
+            88,
+            13
+          ],
+          "tokens": [
+            "T",
+            "h",
+            "e",
+            "Ġ",
+            "w",
+            "e",
+            "a",
+            "t",
+            "h",
+            "e",
+            "r",
+            "Ġ",
+            "i",
+            "s",
+            "Ġ",
+            "s",
+            "u",
+            "n",
+            "n",
+            "y",
+            "."
+          ],
+          "decoded": "The weather is sunny.",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        },
+        "untrusted_copy": {
+          "ids": [
+            51,
+            71,
+            68,
+            220,
+            86,
+            68,
+            64,
+            83,
+            71,
+            68,
+            81,
+            220,
+            72,
+            82,
+            220,
+            82,
+            84,
+            77,
+            77,
+            88,
+            13
+          ],
+          "tokens": [
+            "T",
+            "h",
+            "e",
+            "Ġ",
+            "w",
+            "e",
+            "a",
+            "t",
+            "h",
+            "e",
+            "r",
+            "Ġ",
+            "i",
+            "s",
+            "Ġ",
+            "s",
+            "u",
+            "n",
+            "n",
+            "y",
+            "."
+          ],
+          "decoded": "The weather is sunny.",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        }
+      }
+    },
+    {
+      "fixture": "empty",
+      "family": "benign",
+      "text": "",
+      "modes": {
+        "default": {
+          "ids": [],
+          "tokens": [],
+          "decoded": "",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        },
+        "special_flag": {
+          "ids": [],
+          "tokens": [],
+          "decoded": "",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        },
+        "untrusted_copy": {
+          "ids": [],
+          "tokens": [],
+          "decoded": "",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        }
+      }
+    },
+    {
+      "fixture": "leading_spaces",
+      "family": "benign",
+      "text": "  hello  ",
+      "modes": {
+        "default": {
+          "ids": [
+            220,
+            220,
+            71,
+            68,
+            75,
+            75,
+            78,
+            220,
+            220
+          ],
+          "tokens": [
+            "Ġ",
+            "Ġ",
+            "h",
+            "e",
+            "l",
+            "l",
+            "o",
+            "Ġ",
+            "Ġ"
+          ],
+          "decoded": "  hello  ",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        },
+        "special_flag": {
+          "ids": [
+            220,
+            220,
+            71,
+            68,
+            75,
+            75,
+            78,
+            220,
+            220
+          ],
+          "tokens": [
+            "Ġ",
+            "Ġ",
+            "h",
+            "e",
+            "l",
+            "l",
+            "o",
+            "Ġ",
+            "Ġ"
+          ],
+          "decoded": "  hello  ",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        },
+        "untrusted_copy": {
+          "ids": [
+            220,
+            220,
+            71,
+            68,
+            75,
+            75,
+            78,
+            220,
+            220
+          ],
+          "tokens": [
+            "Ġ",
+            "Ġ",
+            "h",
+            "e",
+            "l",
+            "l",
+            "o",
+            "Ġ",
+            "Ġ"
+          ],
+          "decoded": "  hello  ",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        }
+      }
+    },
+    {
+      "fixture": "tabs_newline",
+      "family": "benign",
+      "text": "\talpha\nbeta\r\n",
+      "modes": {
+        "default": {
+          "ids": [
+            197,
+            64,
+            75,
+            79,
+            71,
+            64,
+            198,
+            65,
+            68,
+            83,
+            64,
+            201,
+            198
+          ],
+          "tokens": [
+            "ĉ",
+            "a",
+            "l",
+            "p",
+            "h",
+            "a",
+            "Ċ",
+            "b",
+            "e",
+            "t",
+            "a",
+            "č",
+            "Ċ"
+          ],
+          "decoded": "\talpha\nbeta\r\n",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        },
+        "special_flag": {
+          "ids": [
+            197,
+            64,
+            75,
+            79,
+            71,
+            64,
+            198,
+            65,
+            68,
+            83,
+            64,
+            201,
+            198
+          ],
+          "tokens": [
+            "ĉ",
+            "a",
+            "l",
+            "p",
+            "h",
+            "a",
+            "Ċ",
+            "b",
+            "e",
+            "t",
+            "a",
+            "č",
+            "Ċ"
+          ],
+          "decoded": "\talpha\nbeta\r\n",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        },
+        "untrusted_copy": {
+          "ids": [
+            197,
+            64,
+            75,
+            79,
+            71,
+            64,
+            198,
+            65,
+            68,
+            83,
+            64,
+            201,
+            198
+          ],
+          "tokens": [
+            "ĉ",
+            "a",
+            "l",
+            "p",
+            "h",
+            "a",
+            "Ċ",
+            "b",
+            "e",
+            "t",
+            "a",
+            "č",
+            "Ċ"
+          ],
+          "decoded": "\talpha\nbeta\r\n",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        }
+      }
+    },
+    {
+      "fixture": "composed",
+      "family": "benign",
+      "text": "café",
+      "modes": {
+        "default": {
+          "ids": [
+            66,
+            64,
+            69,
+            127,
+            102
+          ],
+          "tokens": [
+            "c",
+            "a",
+            "f",
+            "Ã",
+            "©"
+          ],
+          "decoded": "café",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        },
+        "special_flag": {
+          "ids": [
+            66,
+            64,
+            69,
+            127,
+            102
+          ],
+          "tokens": [
+            "c",
+            "a",
+            "f",
+            "Ã",
+            "©"
+          ],
+          "decoded": "café",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        },
+        "untrusted_copy": {
+          "ids": [
+            66,
+            64,
+            69,
+            127,
+            102
+          ],
+          "tokens": [
+            "c",
+            "a",
+            "f",
+            "Ã",
+            "©"
+          ],
+          "decoded": "café",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        }
+      }
+    },
+    {
+      "fixture": "decomposed",
+      "family": "benign",
+      "text": "café",
+      "modes": {
+        "default": {
+          "ids": [
+            66,
+            64,
+            69,
+            68,
+            136,
+            223
+          ],
+          "tokens": [
+            "c",
+            "a",
+            "f",
+            "e",
+            "Ì",
+            "ģ"
+          ],
+          "decoded": "café",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        },
+        "special_flag": {
+          "ids": [
+            66,
+            64,
+            69,
+            68,
+            136,
+            223
+          ],
+          "tokens": [
+            "c",
+            "a",
+            "f",
+            "e",
+            "Ì",
+            "ģ"
+          ],
+          "decoded": "café",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        },
+        "untrusted_copy": {
+          "ids": [
+            66,
+            64,
+            69,
+            68,
+            136,
+            223
+          ],
+          "tokens": [
+            "c",
+            "a",
+            "f",
+            "e",
+            "Ì",
+            "ģ"
+          ],
+          "decoded": "café",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        }
+      }
+    },
+    {
+      "fixture": "emoji",
+      "family": "benign",
+      "text": "🙂 🧑🏽‍💻",
+      "modes": {
+        "default": {
+          "ids": [
+            172,
+            253,
+            247,
+            224,
+            220,
+            172,
+            253,
+            100,
+            239,
+            172,
+            253,
+            237,
+            121,
+            158,
+            222,
+            235,
+            172,
+            253,
+            240,
+            119
+          ],
+          "tokens": [
+            "ð",
+            "Ł",
+            "Ļ",
+            "Ĥ",
+            "Ġ",
+            "ð",
+            "Ł",
+            "§",
+            "ĳ",
+            "ð",
+            "Ł",
+            "ı",
+            "½",
+            "â",
+            "Ģ",
+            "į",
+            "ð",
+            "Ł",
+            "Ĵ",
+            "»"
+          ],
+          "decoded": "🙂 🧑🏽‍💻",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        },
+        "special_flag": {
+          "ids": [
+            172,
+            253,
+            247,
+            224,
+            220,
+            172,
+            253,
+            100,
+            239,
+            172,
+            253,
+            237,
+            121,
+            158,
+            222,
+            235,
+            172,
+            253,
+            240,
+            119
+          ],
+          "tokens": [
+            "ð",
+            "Ł",
+            "Ļ",
+            "Ĥ",
+            "Ġ",
+            "ð",
+            "Ł",
+            "§",
+            "ĳ",
+            "ð",
+            "Ł",
+            "ı",
+            "½",
+            "â",
+            "Ģ",
+            "į",
+            "ð",
+            "Ł",
+            "Ĵ",
+            "»"
+          ],
+          "decoded": "🙂 🧑🏽‍💻",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        },
+        "untrusted_copy": {
+          "ids": [
+            172,
+            253,
+            247,
+            224,
+            220,
+            172,
+            253,
+            100,
+            239,
+            172,
+            253,
+            237,
+            121,
+            158,
+            222,
+            235,
+            172,
+            253,
+            240,
+            119
+          ],
+          "tokens": [
+            "ð",
+            "Ł",
+            "Ļ",
+            "Ĥ",
+            "Ġ",
+            "ð",
+            "Ł",
+            "§",
+            "ĳ",
+            "ð",
+            "Ł",
+            "ı",
+            "½",
+            "â",
+            "Ģ",
+            "į",
+            "ð",
+            "Ł",
+            "Ĵ",
+            "»"
+          ],
+          "decoded": "🙂 🧑🏽‍💻",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        }
+      }
+    },
+    {
+      "fixture": "cjk",
+      "family": "benign",
+      "text": "你好，世界",
+      "modes": {
+        "default": {
+          "ids": [
+            160,
+            121,
+            254,
+            161,
+            98,
+            121,
+            171,
+            120,
+            234,
+            160,
+            116,
+            244,
+            163,
+            243,
+            234
+          ],
+          "tokens": [
+            "ä",
+            "½",
+            "ł",
+            "å",
+            "¥",
+            "½",
+            "ï",
+            "¼",
+            "Į",
+            "ä",
+            "¸",
+            "ĸ",
+            "ç",
+            "ķ",
+            "Į"
+          ],
+          "decoded": "你好，世界",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        },
+        "special_flag": {
+          "ids": [
+            160,
+            121,
+            254,
+            161,
+            98,
+            121,
+            171,
+            120,
+            234,
+            160,
+            116,
+            244,
+            163,
+            243,
+            234
+          ],
+          "tokens": [
+            "ä",
+            "½",
+            "ł",
+            "å",
+            "¥",
+            "½",
+            "ï",
+            "¼",
+            "Į",
+            "ä",
+            "¸",
+            "ĸ",
+            "ç",
+            "ķ",
+            "Į"
+          ],
+          "decoded": "你好，世界",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        },
+        "untrusted_copy": {
+          "ids": [
+            160,
+            121,
+            254,
+            161,
+            98,
+            121,
+            171,
+            120,
+            234,
+            160,
+            116,
+            244,
+            163,
+            243,
+            234
+          ],
+          "tokens": [
+            "ä",
+            "½",
+            "ł",
+            "å",
+            "¥",
+            "½",
+            "ï",
+            "¼",
+            "Į",
+            "ä",
+            "¸",
+            "ĸ",
+            "ç",
+            "ķ",
+            "Į"
+          ],
+          "decoded": "你好，世界",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        }
+      }
+    },
+    {
+      "fixture": "lookalike",
+      "family": "benign",
+      "text": "<tool_responsE>",
+      "modes": {
+        "default": {
+          "ids": [
+            27,
+            83,
+            78,
+            78,
+            75,
+            62,
+            81,
+            68,
+            82,
+            79,
+            78,
+            77,
+            82,
+            36,
+            29
+          ],
+          "tokens": [
+            "<",
+            "t",
+            "o",
+            "o",
+            "l",
+            "_",
+            "r",
+            "e",
+            "s",
+            "p",
+            "o",
+            "n",
+            "s",
+            "E",
+            ">"
+          ],
+          "decoded": "<tool_responsE>",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        },
+        "special_flag": {
+          "ids": [
+            27,
+            83,
+            78,
+            78,
+            75,
+            62,
+            81,
+            68,
+            82,
+            79,
+            78,
+            77,
+            82,
+            36,
+            29
+          ],
+          "tokens": [
+            "<",
+            "t",
+            "o",
+            "o",
+            "l",
+            "_",
+            "r",
+            "e",
+            "s",
+            "p",
+            "o",
+            "n",
+            "s",
+            "E",
+            ">"
+          ],
+          "decoded": "<tool_responsE>",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        },
+        "untrusted_copy": {
+          "ids": [
+            27,
+            83,
+            78,
+            78,
+            75,
+            62,
+            81,
+            68,
+            82,
+            79,
+            78,
+            77,
+            82,
+            36,
+            29
+          ],
+          "tokens": [
+            "<",
+            "t",
+            "o",
+            "o",
+            "l",
+            "_",
+            "r",
+            "e",
+            "s",
+            "p",
+            "o",
+            "n",
+            "s",
+            "E",
+            ">"
+          ],
+          "decoded": "<tool_responsE>",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        }
+      }
+    },
+    {
+      "fixture": "null_byte",
+      "family": "benign",
+      "text": "a\u0000b",
+      "modes": {
+        "default": {
+          "ids": [
+            64,
+            188,
+            65
+          ],
+          "tokens": [
+            "a",
+            "Ā",
+            "b"
+          ],
+          "decoded": "a\u0000b",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        },
+        "special_flag": {
+          "ids": [
+            64,
+            188,
+            65
+          ],
+          "tokens": [
+            "a",
+            "Ā",
+            "b"
+          ],
+          "decoded": "a\u0000b",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        },
+        "untrusted_copy": {
+          "ids": [
+            64,
+            188,
+            65
+          ],
+          "tokens": [
+            "a",
+            "Ā",
+            "b"
+          ],
+          "decoded": "a\u0000b",
+          "roundtrip_utf8": true,
+          "marker_ids": []
+        }
+      }
+    }
+  ],
+  "counts": {
+    "default": {
+      "roundtrip_rows": 18,
+      "marker_bearing_rows": 8,
+      "benign_ids_preserved": 10
+    },
+    "special_flag": {
+      "roundtrip_rows": 18,
+      "marker_bearing_rows": 6,
+      "benign_ids_preserved": 10
+    },
+    "untrusted_copy": {
+      "roundtrip_rows": 18,
+      "marker_bearing_rows": 0,
+      "benign_ids_preserved": 10
+    }
+  },
+  "span_assembly": {
+    "prefix": "<|im_start|>user\n",
+    "untrusted": "<tool_response>",
+    "suffix": "\n<|im_end|>",
+    "modes": {
+      "default": {
+        "prefix_ids": [
+          256,
+          84,
+          82,
+          68,
+          81,
+          198
+        ],
+        "middle_ids": [
+          258
+        ],
+        "suffix_ids": [
+          198,
+          257
+        ],
+        "assembled_ids": [
+          256,
+          84,
+          82,
+          68,
+          81,
+          198,
+          258,
+          198,
+          257
+        ],
+        "decoded": "<|im_start|>user\n<tool_response>\n<|im_end|>",
+        "roundtrip_utf8": true
+      },
+      "special_flag": {
+        "prefix_ids": [
+          256,
+          84,
+          82,
+          68,
+          81,
+          198
+        ],
+        "middle_ids": [
+          258
+        ],
+        "suffix_ids": [
+          198,
+          257
+        ],
+        "assembled_ids": [
+          256,
+          84,
+          82,
+          68,
+          81,
+          198,
+          258,
+          198,
+          257
+        ],
+        "decoded": "<|im_start|>user\n<tool_response>\n<|im_end|>",
+        "roundtrip_utf8": true
+      },
+      "untrusted_copy": {
+        "prefix_ids": [
+          256,
+          84,
+          82,
+          68,
+          81,
+          198
+        ],
+        "middle_ids": [
+          27,
+          83,
+          78,
+          78,
+          75,
+          62,
+          81,
+          68,
+          82,
+          79,
+          78,
+          77,
+          82,
+          68,
+          29
+        ],
+        "suffix_ids": [
+          198,
+          257
+        ],
+        "assembled_ids": [
+          256,
+          84,
+          82,
+          68,
+          81,
+          198,
+          27,
+          83,
+          78,
+          78,
+          75,
+          62,
+          81,
+          68,
+          82,
+          79,
+          78,
+          77,
+          82,
+          68,
+          29,
+          198,
+          257
+        ],
+        "decoded": "<|im_start|>user\n<tool_response>\n<|im_end|>",
+        "roundtrip_utf8": true
+      }
+    }
+  },
+  "whole_string_retokenization": {
+    "ids": [
+      256,
+      84,
+      82,
+      68,
+      81,
+      198,
+      258,
+      198,
+      257
+    ],
+    "equals_default_span_ids": true,
+    "differs_from_preserved_ids": true,
+    "restored_tool_marker": true
+  },
+  "raw_model_counterexamples": [
+    {
+      "text": "  hello",
+      "ids": [
+        71,
+        68,
+        75,
+        75,
+        78
+      ],
+      "decoded": "hello",
+      "roundtrip_utf8": false
+    },
+    {
+      "text": "café",
+      "ids": [
+        66,
+        64,
+        69,
+        68
+      ],
+      "decoded": "cafe",
+      "roundtrip_utf8": false
+    },
+    {
+      "text": "🙂",
+      "ids": [],
+      "decoded": "",
+      "roundtrip_utf8": false
+    }
+  ]
+}

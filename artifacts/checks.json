@@ -1,0 +1,36 @@
+{
+  "tests_run": 12,
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "composition_checks": 256,
+  "mutations": {
+    "special_only": [
+      "tool_start:marker_retained",
+      "tool_end:marker_retained",
+      "mixed:marker_retained",
+      "quoted_marker:marker_retained",
+      "adjacent:marker_retained",
+      "embedded:marker_retained"
+    ],
+    "drop_preprocessing": [
+      "quoted_marker:text_changed",
+      "ordinary:text_changed",
+      "ordinary:benign_ids_changed",
+      "leading_spaces:text_changed",
+      "leading_spaces:benign_ids_changed",
+      "tabs_newline:text_changed",
+      "tabs_newline:benign_ids_changed",
+      "composed:text_changed",
+      "composed:benign_ids_changed",
+      "decomposed:text_changed",
+      "decomposed:benign_ids_changed",
+      "emoji:text_changed",
+      "emoji:benign_ids_changed",
+      "cjk:text_changed",
+      "cjk:benign_ids_changed",
+      "null_byte:text_changed",
+      "null_byte:benign_ids_changed"
+    ]
+  }
+}
